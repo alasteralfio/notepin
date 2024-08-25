@@ -1,5 +1,17 @@
-#index-body {
-    display: flex;
+.main-body {
     height: 400px;
     width: 300px;
+    background: rgb(162,210,255);
+    background: linear-gradient(180deg, rgba(162,210,255,1) 0%, rgba(255,175,204,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.main-container {
+    height: 385px;
+    width: 285px;
+    border-radius: 20px;
+    background-color: white;
 }
