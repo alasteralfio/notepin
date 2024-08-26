@@ -47,7 +47,16 @@ function displayNotes() {
 
         // Append the note div to the note-area
         noteArea.appendChild(noteDiv);
+
+        // Add click event listener to the note div
+        noteDiv.addEventListener('click', () => {
+            NoteClicked(noteDiv, note);
+        })
     });
+}
+
+function NoteClicked(noteDiv, note) {
+    console.log(note.noteId);
 }
 
 document.addEventListener('DOMContentLoaded', displayNotes);
