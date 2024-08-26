@@ -1,17 +1,72 @@
 .main-body {
-    height: 400px;
+    max-height: 400px;
     width: 300px;
-    background: rgb(162,210,255);
-    background: linear-gradient(180deg, rgba(162,210,255,1) 0%, rgba(255,175,204,1) 100%);
+    background: rgb(94,176,253);
+    background: linear-gradient(180deg, rgba(94,176,253,1) 0%, rgba(255,123,168,1) 100%);
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0;
+    overflow: hidden;
+    font-family: 'Sora', sans-serif;
+    position: relative;
+}
+
+.main-title {
+    position: absolute;
+    margin-top: 16px;
+    margin-bottom: 0px;
+    margin-left: 12px;
+    font-weight: 800;
+    font-size: 18px;
+    color: white;
 }
 
 .main-container {
-    height: 385px;
+    position: relative;
+    height: 350px;
     width: 285px;
     border-radius: 20px;
     background-color: white;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    display: flex;
+}
+
+/* index.html Notes Display */
+#note-area {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+#note-area::-webkit-scrollbar {
+    display: none;
+}
+
+/* Top fade effect */
+.main-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px; 
+    background: linear-gradient(180deg, rgba(255,255,255,1) 65%, rgba(0,0,0,0) 100%);
+    pointer-events: none; /* Allow clicks through the gradient */
+}
+
+/* Bottom fade effect */
+.main-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 65%, rgba(0,0,0,0) 100%);    pointer-events: none; /* Allow clicks through the gradient */
+}
+
+.note-div {
+    background-color: blue;
 }
