@@ -2,7 +2,7 @@
     max-height: 400px;
     width: 300px;
     background: rgb(94,176,253);
-    background: linear-gradient(180deg, rgba(94,176,253,1) 0%, rgba(255,123,168,1) 100%);
+    background: linear-gradient(180deg, rgb(50, 156, 255) 0%, rgba(255,123,168,1) 100%);
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -12,7 +12,7 @@
 
 .main-title {
     position: absolute;
-    margin-top: 16px;
+    margin-top: 18px;
     margin-bottom: 0px;
     margin-left: 12px;
     font-weight: 800;
@@ -26,7 +26,7 @@
     width: 285px;
     border-radius: 20px;
     background-color: white;
-    padding: 10px;
+    padding-bottom: 10px;
     margin-top: 40px;
     margin-bottom: 15px;
     overflow: hidden;
@@ -51,7 +51,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 30px; 
+    height: 15px; 
     background: linear-gradient(180deg, rgba(255,255,255,1) 65%, rgba(0,0,0,0) 100%);
     pointer-events: none; /* Allow clicks through the gradient */
 }
@@ -67,6 +67,36 @@
     background: linear-gradient(0deg, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 65%, rgba(0,0,0,0) 100%);    pointer-events: none; /* Allow clicks through the gradient */
 }
 
+/* Note colors */
+.note-color-0 {
+    background-color: #5eb0fd;
+}
+
+.note-color-1 {
+    background-color: #af96d3;
+}
+
+.note-color-2 {
+    background-color: #ff7ba8;
+}
+
+/* Individual note divs */
 .note-div {
-    background-color: blue;
+    width: 255px;
+    height: 60px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.note-title {
+    font-weight: 800;
+    font-size: 12px;
+    margin: 0;
+}
+
+.note-content {
+    font-weight: 400;
+    font-size: 8px;
+    margin: 0;
 }

@@ -27,11 +27,12 @@ function displayNotes() {
         let noteDiv = document.createElement('div');
         noteDiv.id = `note-${note.noteId}`;
         noteDiv.classList.add('note-div');
+        noteDiv.classList.add(`note-color-${note.noteId % 3}`); // Assigns 1 of 3 colors to the note
         
         // Create title element
         let titleElement = document.createElement('p');
         titleElement.id = `note-title-${note.noteId}`;
-        titleElement.innerHTML = `<b>${note.title}</b>`;
+        titleElement.innerHTML = `${note.title}`;
         titleElement.classList.add('note-title');
         
         // Create content element
