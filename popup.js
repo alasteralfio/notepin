@@ -27,7 +27,6 @@ function displayNotes() {
         let noteDiv = document.createElement('div');
         noteDiv.id = `note-${note.noteId}`;
         noteDiv.classList.add('note-div');
-        noteDiv.classList.add(`note-color-${note.noteId % 3}`); // Assigns 1 of 3 colors to the note
         
         // Create title element
         let titleElement = document.createElement('p');
@@ -50,7 +49,7 @@ function displayNotes() {
 
         // Add click event listener to the note div
         noteDiv.addEventListener('click', () => {
-            NoteClicked(noteDiv, note);
+            window.location.href = `note.html?id=${note.noteId}`
         })
     });
 }

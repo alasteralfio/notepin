@@ -24,3 +24,18 @@ chrome.storage.local.get(["notes"]).then((result) => {
     console.log("Value is ", result.notes);
     console.log("Value (stringified) is ", JSON.stringify(result.notes, null, 2));
 });
+
+
+// Set data
+chrome.storage.local.clear(function() {
+    var error = chrome.runtime.lastError;
+    if (error) {
+        console.error('Error clearing the local storage:', error);
+    } else {
+        console.log('Local storage is now empty.');
+    }
+});
+
+chrome.storage.local.set({ notes: [{noteId: 1, title: "Note 1", content: "Content 1"}] }, function() {
+    console.log('Notes saved.');
+});

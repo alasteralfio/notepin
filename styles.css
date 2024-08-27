@@ -67,19 +67,6 @@
     background: linear-gradient(0deg, rgba(255,255,255,1) 35%, rgba(255,255,255,1) 65%, rgba(0,0,0,0) 100%);    pointer-events: none; /* Allow clicks through the gradient */
 }
 
-/* Note colors */
-.note-color-0 {
-    background-color: #5eb0fd;
-}
-
-.note-color-1 {
-    background-color: #af96d3;
-}
-
-.note-color-2 {
-    background-color: #ff7ba8;
-}
-
 /* Individual note divs */
 .note-div {
     width: 255px;
@@ -87,6 +74,8 @@
     border-radius: 10px;
     margin-bottom: 10px;
     padding: 5px;
+    padding-left: 8px;
+    background: #3cacff;
 }
 
 .note-title {
